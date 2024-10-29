@@ -1,9 +1,13 @@
 @extends('layouts.app')
 @section('content')
 <body>
-    <main>
+    <header>
         @include('partials.navbar')
+    </header>
+    <main>
         @include('partials.hero')
+        @include('partials.project')
+        
     </main>
 </body>
 @endsection

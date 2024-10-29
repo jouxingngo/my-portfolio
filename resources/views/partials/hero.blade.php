@@ -1,6 +1,6 @@
  <!-- Home -->
  <section id="home" class="py-1">
-    <div class="container flex flex-wrap l items-center justify-center mx-auto mt-10 md:px-12">
+    <div class="container flex flex-wrap items-center justify-center mx-auto mt-10 md:px-12">
         <div class="mb-14 lg:mb-0 w-full md:w-1/3">
             <h1 class="max-w-xl text-[1.5rem]  md:text-[2.2rem]  text-gray-600 font-bold font-sans text-center md:text-5xl lg:text-left lg:leading-tight mb-5">
                 HI, IAM JOUXING

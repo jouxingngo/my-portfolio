@@ -13,7 +13,7 @@
   <!-- Navbar -->
   <nav class="py-8 bg-white sticky top-0 border-b border-gray-100">
     <div class="container md:px-12 md:flex md:items-center md:justify-between">
-        <div class="flex items-center justify-between">
+        <div class="flex  items-center justify-between">
             <a href="/" class="flex items-center">
                 <img src="{{ asset('logo-dark.png') }}" class="h-10 mr-3" alt="logo">
             </a>
@@ -32,17 +32,17 @@
    
         <ul class="p-5 z-10 absolute bg-white/80 backdrop-blur w-full left-0 py-4 opacity-0 top-[-400px] transition-all ease-in duration-500 md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100">
             <li class="md:my-0">
-                <a href="#home" class="font-medium text-lg  duration-500 text-slate-900 hover:text-indigo-600" aria-current="page">Home</a>
+                <a href="#home" class="font-medium text-xl  duration-500 text-slate-900 hover:text-indigo-600" aria-current="page">Home</a>
             </li>
             <li class="my-6 md:my-0">
-                <a href="#home" class="font-medium text-lg duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Projects</a>
+                <a href="#home" class="font-medium text-xl duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Projects</a>
             </li>
             <li class="my-6 md:my-0">
-                <a href="#home" class="font-medium text-lg duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Contact</a>
+                <a href="#home" class="font-medium text-xl duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Contact</a>
             </li>
             
             <li class="block md:hidden">
-                <button type="button" class=" text-white bg-primary font-medium rounded-lg text-md px-3.5 py-3 text-center hover:bg-indigo-700 hover:drop-shadow-md transition duration-300 ease-in-out">Rekrut Saya</button>
+                <button type="button" class=" text-white bg-primary font-medium rounded-lg text-lg px-6 py-3 text-center hover:bg-indigo-700 hover:drop-shadow-md transition duration-300 ease-in-out">Hire Me</button>
             </li>
             {{-- <li class="hidden md:block">
                 <button onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" class="px-3.5 py-3 text-yellow-500 bg-[#F8F8F8] p-2 rounded-lg hover:bg-gray-200  transition">
@@ -56,7 +56,7 @@
         <div>
         <ul class="p-5 z-10 after:absolute hidden bg-white/80 backdrop-blur w-full left-0 py-4 opacity-0 top-[-400px] md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100">
                 <li class="hidden md:block">
-                    <button type="button" class=" text-white bg-primary font-medium rounded-lg text-md px-3.5 py-3 text-center hover:bg-indigo-700 hover:drop-shadow-md transition duration-300 ease-in-out">Rekrut Saya</button>
+                    <button type="button" class=" text-white bg-primary font-medium rounded-lg text-lg px-6 py-3 text-center hover:bg-indigo-700 hover:drop-shadow-md transition duration-300 ease-in-out">Hire Me</button>
                 </li>
                 <li class="hidden md:block">
                     <button onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" class="px-3.5 py-3 text-yellow-500 bg-[#F8F8F8] p-2 rounded-lg hover:bg-gray-200  transition">
