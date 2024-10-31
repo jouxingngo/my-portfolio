@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-    darkMode: false,
     content: [
         "./resources/**/*.blade.php",
         "./resources/**/*.js",
         "./resources/**/*.vue",
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
     ],
+    darkMode: "class",
     theme: {
         container: {
             padding: "20px",

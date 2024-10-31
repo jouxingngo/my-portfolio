@@ -1,68 +1,92 @@
 @push('style')
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 @endpush
 @push('script')
 <script>
+    
+    function toggleDarkMode() {
+    const html = document.querySelector('html'); 
+    const logoImg = document.getElementById('logo-img');
+
+    // Toggle class dark pada elemen html
+    html.classList.toggle('dark');
+
+    // Cek apakah class dark ada di html
+    if (html.classList.contains('dark')) {
+        logoImg.src = '{{ asset("logo_light.png") }}'; // Ganti dengan path logo gelap
+        localStorage.setItem('theme', 'dark'); // Simpan preferensi
+    } else {
+        logoImg.src = '{{ asset("logo-dark.png") }}'; // Ganti dengan path logo terang
+        localStorage.setItem('theme', 'light'); // Simpan preferensi
+    }
+}
+
     function Menu(e) {
         let list = document.querySelector('ul');
 
         e.name === 'menu' ? (e.name = "close",list.classList.add('top-[80px]') , list.classList.add('opacity-100') ) : ( e.name = "menu" , list.classList.remove('top-[80px]'), list.classList.remove('opacity-100')) 
     }
+    
+
 </script>
 @endpush
   <!-- Navbar -->
-  <nav class="py-8 bg-white sticky top-0 border-b border-gray-100">
+  <nav class="py-8 bg-white sticky dark:bg-[#0d2438] top-0  ">
     <div class="container md:px-12 md:flex md:items-center md:justify-between">
         <div class="flex  items-center justify-between">
             <a href="/" class="flex items-center">
-                <img src="{{ asset('logo-dark.png') }}" class="h-10 mr-3" alt="logo">
+                <img id="logo-img" src="{{ asset("logo_light.png") }}" class="h-10 mr-3" alt="logo">
             </a>
-            <button onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" class="md:hidden px-3.5 py-3 text-yellow-500 bg-[#F8F8F8] p-2 rounded-lg hover:bg-gray-200  transition">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path d="M12 3v1M12 20v1M4.22 4.22l.707.707M18.36 18.36l.707.707M1 12h1m20 0h1M4.22 19.78l.707-.707M18.36 5.64l.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                </svg>
+            <button id="toggle-icon" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" class="px-4 py-3 text-yellow-500 bg-[#F8F8F8] p-2 dark:text-white dark:bg-[#102c45] shadow-sm rounded-lg md:hidden transition">
+                <i class="fas fa-sun"></i>
             </button>
-            <span class="block mx-2 text-3xl bg-gray-100 p-2 rounded-lg md:hidden">
-                <svg name="menu" onclick="Menu(this)" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            <span class="block mx-2 text-3xl p-2 rounded-lg md:hidden">
+                <svg 
+                    name="menu" 
+                    onclick="Menu(this)" 
+                    xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke-width="1.7" 
+                    stroke="currentColor" 
+                    class="w-6 h-6 text-gray-800 dark:text-white transition-colors duration-300"
+                >
+                    <path 
+                        stroke-linecap="round" 
+                        stroke-linejoin="round" 
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" 
+                    />
                 </svg>                      
             </span>
+            
          
         </div>
    
-        <ul class="p-5 z-10 absolute bg-white/80 backdrop-blur w-full left-0 py-4 opacity-0 top-[-400px] transition-all ease-in duration-500 md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100">
+        <ul class="p-5 z-10 absolute  backdrop-blur w-full left-0 py-4 opacity-0 top-[-400px] transition-all ease-in duration-500 md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100">
             <li class="md:my-0">
-                <a href="#home" class="font-medium text-xl  duration-500 text-slate-900 hover:text-indigo-600" aria-current="page">Home</a>
+                <a href="#home" class="font-medium text-xl  duration-500 dark:text-white text-slate-900 hover:text-indigo-600" aria-current="page">Home</a>
             </li>
             <li class="my-6 md:my-0">
-                <a href="#project" class="font-medium text-xl duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Projects</a>
+                <a href="#project" class="font-medium text-xl duration-500 dark:text-white text-gray-900 hover:text-indigo-600" aria-current="page">Projects</a>
             </li>
             <li class="my-6 md:my-0">
-                <a href="#contact" class="font-medium text-xl duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Contact</a>
+                <a href="#contact" class="font-medium text-xl duration-500 dark:text-white text-gray-900 hover:text-indigo-600" aria-current="page">Contact</a>
             </li>
             
             <li class="block md:hidden">
                 <button type="button" class=" text-white bg-primary font-medium rounded-lg text-lg px-6 py-3 text-center hover:bg-indigo-700 hover:drop-shadow-md transition duration-300 ease-in-out">Hire Me</button>
             </li>
-            {{-- <li class="hidden md:block">
-                <button onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" class="px-3.5 py-3 text-yellow-500 bg-[#F8F8F8] p-2 rounded-lg hover:bg-gray-200  transition">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path d="M12 3v1M12 20v1M4.22 4.22l.707.707M18.36 18.36l.707.707M1 12h1m20 0h1M4.22 19.78l.707-.707M18.36 5.64l.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                    </svg>
-                </button>
-            </li> --}}
            
         </ul>
         <div>
-        <ul class="p-5 z-10 after:absolute hidden bg-white/80 backdrop-blur w-full left-0 py-4 opacity-0 top-[-400px] md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100">
-                <li class="hidden md:block">
+        <ul class="p-5 z-10 after:absolute hidden  w-full left-0 py-4 opacity-0 top-[-400px] md:p-0 md:flex md:items-center md:space-x-8 md:static md:w-auto md:opacity-100">
+            <li class="hidden md:block">
                     <button type="button" class=" text-white bg-primary font-medium rounded-lg text-lg px-6 py-3 text-center hover:bg-indigo-700 hover:drop-shadow-md transition duration-300 ease-in-out">Hire Me</button>
                 </li>
                 <li class="hidden md:block">
-                    <button onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" class="px-3.5 py-3 text-yellow-500 bg-[#F8F8F8] p-2 rounded-lg hover:bg-gray-200  transition">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M12 3v1M12 20v1M4.22 4.22l.707.707M18.36 18.36l.707.707M1 12h1m20 0h1M4.22 19.78l.707-.707M18.36 5.64l.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                        </svg>
+                    <button id="toggle-icon" onclick="toggleDarkMode()" aria-label="Toggle Dark Mode" class="px-4 py-3 text-yellow-500 bg-[#F8F8F8] p-2 dark:text-white dark:bg-[#102c45] shadow-sm rounded-lg  transition">
+                        <i class="fas fa-sun"></i>
                     </button>
                 </li>
             </ul>
@@ -72,7 +96,7 @@
     </div>
 </nav>
 <div class="fixed bottom-8 z-40 right-8" id="backtop">
-        <a href="#" class="text-white transition duration-300 hover:bg-primary/60 flex justify-center items-center w-10 h-10 rounded-lg bg-primary">^</a>
+        <a href="#" class="text-white transition duration-300 hover:bg-primary/60 flex justify-center items-center w-10 h-10 rounded-lg bg-primary"><i class="fas fa-arrow-up"></i></a>
 </div>
 @push('script')
 <script>
