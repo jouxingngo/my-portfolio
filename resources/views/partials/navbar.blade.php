@@ -11,6 +11,7 @@
 
     // Toggle class dark pada elemen html
     html.classList.toggle('dark');
+    localStorage.theme.toggle='dark'
 
     // Cek apakah class dark ada di html
     if (html.classList.contains('dark')) {
@@ -32,7 +33,7 @@
 </script>
 @endpush
   <!-- Navbar -->
-  <nav class="py-8 bg-white sticky dark:bg-[#0d2438] top-0  ">
+  <nav class="py-4 bg-white sticky shadow-sm dark:bg-[#0d2438] top-0  ">
     <div class="container md:px-12 md:flex md:items-center md:justify-between">
         <div class="flex  items-center justify-between">
             <a href="/" class="flex items-center">
