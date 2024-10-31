@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 class ProjectController extends Controller
 {
     public function index(){
-        $projects = Project::latest()->take(6)->get();
+        $projects = Project::take(6)->get();
         
         return view('portfolio', compact('projects'));
     }
 
-    public function show($id)
+    public function all()
     {
-        $project = Project::find($id);
-        return view('project.show', compact('project'));
+        $projects = Project::paginate(6);
+        return view('projects', compact('projects'));
     }
 }

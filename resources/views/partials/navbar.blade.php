@@ -35,10 +35,10 @@
                 <a href="#home" class="font-medium text-xl  duration-500 text-slate-900 hover:text-indigo-600" aria-current="page">Home</a>
             </li>
             <li class="my-6 md:my-0">
-                <a href="#home" class="font-medium text-xl duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Projects</a>
+                <a href="#project" class="font-medium text-xl duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Projects</a>
             </li>
             <li class="my-6 md:my-0">
-                <a href="#home" class="font-medium text-xl duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Contact</a>
+                <a href="#contact" class="font-medium text-xl duration-500 text-gray-900 hover:text-indigo-600" aria-current="page">Contact</a>
             </li>
             
             <li class="block md:hidden">
@@ -71,4 +71,12 @@
      
     </div>
 </nav>
+<div class="fixed bottom-8 z-40 right-8" id="backtop">
+        <a href="#" class="text-white transition duration-300 hover:bg-primary/60 flex justify-center items-center w-10 h-10 rounded-lg bg-primary">^</a>
+</div>
+@push('script')
+<script>
+    window.onscroll= () => document.querySelector("#backtop").classList.toggle("hidden", !pageYOffset);
+</script>
+@endpush
 <!-- /Navbar -->

@@ -1,0 +1,10 @@
+@extends('layouts.app')
+@section('content')
+<body>
+    <header>
+    </header>
+    <main>
+        @include('partials.all')
+    </main>
+</body>
+@endsection
