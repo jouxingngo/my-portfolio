@@ -3,7 +3,7 @@
     <p class="dark:text-white w-full items-center text-center  text-slate-700 my-1 text-4xl">
         Contact Me
     </p>
-    <p class="text-slate-700 mb-6 dark:text-white">You can reach me on the following platforms:</p>
+    <p class="text-slate-700 text-lg my-6 dark:text-white">You can reach me on the following platforms:</p>
     
     <ul class="flex justify-center text-3xl  text-gray-400  space-x-6">
         <li class="bg-gray-50 dark:bg-[#1d4065]/30 p-6 flex transition duration-500 hover:text-primary justify-center items-center  rounded-lg w-10 h-10">
