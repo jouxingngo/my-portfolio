@@ -25,7 +25,10 @@ class AdminPanelProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
+            ->brandName('jouxingngo')
+            ->brandLogo(asset('logo-dark.png'))
             ->path('admin')
+            ->favicon(asset('icondark.png'))
             ->login()
             ->colors([
                 'primary' => Color::Blue,
