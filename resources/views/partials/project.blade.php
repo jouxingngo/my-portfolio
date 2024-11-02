@@ -15,21 +15,22 @@
     }   
   </script>
 @endpush
-<section id="project" class="py-[60px]">
+<section id="project" class="py-[60px] ">
     <div class="container">
         <div class="flex flex-wrap">
-            <div class="dark:text-white w-full text-center my-10 text-slate-800 md:text-[2.7rem] text-2xl">
+            <p class="dark:text-white w-full text-center my-10 text-slate-700 md:text-[2.7rem] text-2xl">
                 Projects portfolio
-            </div>
-
-
+            </p>
             {{-- project start --}}
-            <div class="flex flex-wrap justify-center">
+            <div class="flex w-full flex-wrap justify-center">
+                <div class="flex w-full mx-4 justify-center">
+                    <hr class="h-px w-full text-center my-8 bg-slate-200 border-0 dark:bg-[#1d4065]">
+                </div>
                 @forelse ($projects as $project)
-                <div class="w-full mt-8 md:w-1/2 lg:w-1/3 2xl:w-1/4 group">
+                <div class="my-5 md:w-1/2 lg:w-1/3 2xl:w-1/4 group">
                     <div class="mx-4 dark:bg-[#102c45] bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out">
                         <div class="overflow-hidden rounded-t-lg h-72">
-                            <img class="w-full h-full object-cover group-hover:scale-105 transition duration-300" src="{{ asset('/storage/'.$project->img) }}" alt="" />
+                            <img class="w-full object-center h-full object-fill group-hover:scale-105 transition duration-300" src="{{ asset('/storage/'.$project->img) }}" alt="" />
                         </div>
 
                         <div class="p-5">
@@ -60,7 +61,7 @@
                                     </svg>
                                 </a>
 
-                                <a href="{{ $project->repo_link }}" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-500 rounded-lg hover:bg-blue-500/60 focus:ring-4 focus:outline-none focus:ring-primary ">
+                                <a href="{{ $project->repo_link }}" target="_blank" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-primary rounded-lg hover:bg-primary/90 focus:ring-4 focus:outline-none focus:ring-primary ">
                                     Code
                                     <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
@@ -77,10 +78,13 @@
             </div>
 
             @if ($projects->count() == 6)
-            <div class="mt-8 sm:mt-10 mx-auto ">
+            <div class="my-8 sm:mt-10 mx-auto ">
                 <a class="font-general-medium flex items-center px-6 py-3 rounded-lg shadow-lg hover:shadow-xl bg-indigo-500 hover:bg-indigo-600 focus:ring-1 focus:ring-indigo-900 text-white text-lg sm:text-xl duration-300" aria-label="More Projects" href="{{ route('projects') }}">
                     <button>More Projects</button>
                 </a>
+            </div>
+            <div class="flex w-full mx-4 justify-center">
+                <hr class="h-px w-full text-center my-8 bg-slate-200 border-0 dark:bg-[#1d4065]">
             </div>
             @endif
         {{-- project end --}}

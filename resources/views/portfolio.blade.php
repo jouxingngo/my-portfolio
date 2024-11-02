@@ -13,6 +13,7 @@
     <main>
         @include('partials.hero')
         @include('partials.project')
+        @include('partials.contact')
         
     </main>
 </body>
