@@ -25,7 +25,7 @@
     <div class="container">
         <div class="flex flex-wrap">
             <div class="w-full text-center dark:text-white text-slate-800 md:text-[2.7rem] text-2xl">
-                Projects portfolio
+                My Projects
             </div>
             <div class="w-full text-center dark:text-white text-xl md:text-2xl pt-7 font-thin text-slate-700">
                 Search projects by title

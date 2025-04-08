@@ -43,20 +43,17 @@
         document.addEventListener('DOMContentLoaded', initializeTheme);
 
         // Nabvar toggle
-      // Toggle menu (untuk tombol menu)
-function Menu(e) {
-    let list = document.querySelector('ul');
-    
-    // Toggle menu dan tombol
-    e.classList.toggle('close');
-    e.classList.toggle('menu');
-    
-    list.classList.toggle('top-[80px]');
-    list.classList.toggle('opacity-100');
-}
+        // Toggle menu (untuk tombol menu)
+        function Menu(e) {
+            let list = document.querySelector('ul');
 
+            // Toggle menu dan tombol
+            e.classList.toggle('close');
+            e.classList.toggle('menu');
 
-
+            list.classList.toggle('top-[80px]');
+            list.classList.toggle('opacity-100');
+        }
     </script>
 @endpush
 <!-- Navbar -->
@@ -71,12 +68,14 @@ function Menu(e) {
                 <i class="fas fa-sun"></i>
             </button>
             <span class="block mx-2 text-3xl p-2 rounded-lg md:hidden">
-                <svg name="menu" onclick="Menu(this)" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 24 24" stroke-width="1.7" stroke="currentColor"
-                    class="w-6 h-6 text-gray-800 dark:text-white transition-colors duration-300">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-                </svg>
+                <button onclick="Menu(this)" name="menu" class="p-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.7"
+                        stroke="currentColor"
+                        class="w-6 h-6 text-gray-800 dark:text-white transition-colors duration-300">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
             </span>
 
 

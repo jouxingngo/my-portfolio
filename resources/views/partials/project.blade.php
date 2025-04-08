@@ -19,7 +19,7 @@
     <div class="container">
         <div class="flex flex-wrap">
             <p class="dark:text-white w-full text-center my-10 text-slate-700 md:text-[2.7rem] text-2xl">
-                Projects portfolio
+                My Projects
             </p>
             {{-- project start --}}
             <div class="flex w-full flex-wrap justify-center">
@@ -27,7 +27,7 @@
                     <hr class="h-px w-full text-center my-8 bg-slate-200 border-0 dark:bg-[#1d4065]">
                 </div>
                 @forelse ($projects as $project)
-                <div class="my-5 md:w-1/2 lg:w-1/3 2xl:w-1/4 group">
+                <div class="my-5 md:w-1/2 lg:w-1/3 2xl:w-1/3 group">
                     <div class="mx-4 dark:bg-[#102c45] bg-white rounded-lg shadow-md hover:shadow-lg transition duration-300 ease-in-out">
                         <div class="overflow-hidden rounded-t-lg h-72">
                             <img class="w-full object-center h-full object-fill group-hover:scale-105 transition duration-300" src="{{ asset('/storage/'.$project->img) }}" alt="" />
